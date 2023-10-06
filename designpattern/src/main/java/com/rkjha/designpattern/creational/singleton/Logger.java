@@ -5,7 +5,11 @@ import java.util.List;
 
 public class Logger {
     private static Logger instance = null;
-    List<String> logs = new ArrayList<>();
+    List<String> logs;
+
+    private Logger() {
+        this.logs = new ArrayList<>();
+    }
 
     public static Logger getInstance() {
         if (instance == null) {
